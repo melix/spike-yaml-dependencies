@@ -1,0 +1,15 @@
+api:
+  - platform: org.springframework.boot:spring-boot-dependencies
+    require: 2.1.9.RELEASE
+  - module: org.apache.commons:commons-math3
+    require: 3.6.1
+    because: This is a good dependency to have
+implementation:
+  - module: com.google.guava:guava
+    strictly: 27.1-jre
+    because: everybody uses Guava!
+  - project:
+      path: :other
+testImplementation:
+  - module:   junit:junit
+    require: 4.12
